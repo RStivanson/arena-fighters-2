@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ACB8578B-472C-4C44-87F5-551BB02C283F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ArenaFightersII.My.MyApplication</StartupObject>
+    <RootNamespace>ArenaFightersII</RootNamespace>
+    <AssemblyName>Arena Fighters 2 Dark Ages</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Program Files\Arena Fighters 2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Arena Fighters 2 Dark Ages.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Arena Fighters 2 Dark Ages.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\af2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABOUT_M7.Designer.vb">
+      <DependentUpon>ABOUT_M7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ABOUT_M7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BLACKSMITH.Designer.vb">
+      <DependentUpon>BLACKSMITH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BLACKSMITH.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHAR_CREATION.Designer.vb">
+      <DependentUpon>CHAR_CREATION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CHAR_CREATION.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHAR_SCREEN.Designer.vb">
+      <DependentUpon>CHAR_SCREEN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CHAR_SCREEN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GAME_MENU.Designer.vb">
+      <DependentUpon>GAME_MENU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GAME_MENU.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INVENTORY.Designer.vb">
+      <DependentUpon>INVENTORY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M7001_MSAV_ERROR.Designer.vb">
+      <DependentUpon>M7001_MSAV_ERROR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="M7001_MSAV_ERROR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="_FUNCTIONS.vb" />
+    <Compile Include="_SETTINGS.vb" />
+    <Compile Include="GAME.Designer.vb">
+      <DependentUpon>GAME.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GAME.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPLASH_SCREEN.Designer.vb">
+      <DependentUpon>SPLASH_SCREEN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SPLASH_SCREEN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_HERO.vb" />
+    <Compile Include="ITEMS.vb" />
+    <Compile Include="MAIN_MENU.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAIN_MENU.Designer.vb">
+      <DependentUpon>MAIN_MENU.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ABOUT_M7.resx">
+      <DependentUpon>ABOUT_M7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BLACKSMITH.resx">
+      <DependentUpon>BLACKSMITH.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHAR_CREATION.resx">
+      <DependentUpon>CHAR_CREATION.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GAME_MENU.resx">
+      <DependentUpon>GAME_MENU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INVENTORY.resx">
+      <DependentUpon>INVENTORY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M7001_MSAV_ERROR.resx">
+      <DependentUpon>M7001_MSAV_ERROR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GAME.resx">
+      <DependentUpon>GAME.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPLASH_SCREEN.resx">
+      <DependentUpon>SPLASH_SCREEN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAIN_MENU.resx">
+      <DependentUpon>MAIN_MENU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUTTON_ABOUT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUTTON_CHAR_SCRN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUTTON_DONATE.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUTTON_INV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUTTON_LOAD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUTTON_MENU.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUTTON_NEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUTTON_QUIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BUTTON_SKILLS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ABOUT_M7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACKGROUND_GAME.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACKGROUND_MENU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPLASH_SCREEN_BACK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clothBody.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clothBoots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clothHelm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clothLegs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draBody.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draBoots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draHelm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draLegs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fdraBody.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fdraBoots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fdraHelm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fdraLegs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jokerHelm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaBody.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaBoots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaHelm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaLegs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maiBody.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maiBoots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maiHelm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maiLegs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plaBody.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plaBoots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plaHelm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plaLegs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toughskin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grCape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legCape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redCape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tealCape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adimantiteBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aluminumBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copperBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragonScaleBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ironBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\steelBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btRavagerAlphaBurnt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btRavagerAlphaCooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btRavagerAlphaUncooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btRavagerBurnt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btRavagerCooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btRavagerUncooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fishBurnt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mantaReyBurnt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mantaReyCooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mantaReyUncooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salmonCooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salmonUncooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\springFishBurnt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\springFishCooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\springFishUncooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\troutCooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\troutUncooked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asentine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crosgate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dandifer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deadwoe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Faeshuun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Litenadine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ranite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ryeleaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agilityRing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bartAmulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cbAmulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defAmulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\healthRing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legRing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magicAmulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skillRing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strAmulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\att25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\att50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\att100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beast25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beast50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beast100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cb+25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cb+50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cb+100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\def25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\def50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\def100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\df25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\df50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\df100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpRecov25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpRecov50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpRecov100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mag25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mag50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mag100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spec25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spec50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spec100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\str25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\str50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\str100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tank25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tank50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tank100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fStaff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gDagger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gSword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legDagger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legStaff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legSword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lStaff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oDagger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pStaff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pSword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rDagger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rSword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wStaff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corruptScale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ARENA_FIGHTERS_TITLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\af23.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\af2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="af23.ico" />
+    <None Include="Resources\NPC_Bandit1.png" />
+    <None Include="Resources\basicStick.png" />
+    <None Include="Resources\nothng.png" />
+    <None Include="Resources\preset-Warrior.png" />
+    <None Include="Resources\preset-Skiller.png" />
+    <None Include="Resources\preset-Rogue.png" />
+    <None Include="Resources\preset-Mage.png" />
+    <None Include="Resources\preset-Extremist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".msav">
+      <Visible>False</Visible>
+      <Description>Arena Fighters Save File</Description>
+      <Progid>01007</Progid>
+      <DefaultIcon>af23.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
