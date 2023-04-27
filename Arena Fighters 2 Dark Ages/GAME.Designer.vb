@@ -55,7 +55,6 @@ Partial Class GAME
         CType(Me.poh, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cave2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.HexPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CharScreen
@@ -207,7 +206,6 @@ Partial Class GAME
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.ArenaFightersII.My.Resources.Resources.BACKGROUND_GAME
         Me.ClientSize = New System.Drawing.Size(801, 600)
-        Me.Controls.Add(Me.HexPictureBox1)
         Me.Controls.Add(Me.cave2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.NPC_HERO)
@@ -244,7 +242,6 @@ Partial Class GAME
         CType(Me.poh, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cave2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.HexPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

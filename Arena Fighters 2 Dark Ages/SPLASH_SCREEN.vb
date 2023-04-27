@@ -5,7 +5,6 @@ Imports System.IO
 Public Class SPLASH_SCREEN
     Dim rand As New Random
     Dim amount As Integer = rand.Next(1, 3)
-    Dim temp As New DirectoryInfo("CHANGE THIS TO YOUR ARENA FIGHTERS DIRECTORY Example: 'C:\Users\Owner\Desktop\Arena Fighters 2 Dark Ages\'  ")
 
     Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
         Dim nex As Integer = rand.Next(1, 2)
@@ -16,10 +15,10 @@ Public Class SPLASH_SCREEN
         Dim fileTypeName As String = extension.Substring(1, extension.Length - 1)
 
         ''--- REGISTERS .MSAV FILE EXTENSION ---''
-        My.Computer.Registry.ClassesRoot.CreateSubKey(extension) _
-            .SetValue("", fileTypeName, Microsoft.Win32.RegistryValueKind.String)
-        My.Computer.Registry.ClassesRoot.CreateSubKey(fileTypeName & "\shell\open\command") _
-            .SetValue("", Application.ExecutablePath & " ""%l"" ", Microsoft.Win32.RegistryValueKind.String)
+        'My.Computer.Registry.ClassesRoot.CreateSubKey(extension) _
+        '    .SetValue("", fileTypeName, Microsoft.Win32.RegistryValueKind.String)
+        'My.Computer.Registry.ClassesRoot.CreateSubKey(fileTypeName & "\shell\open\command") _
+        '    .SetValue("", Application.ExecutablePath & " ""%l"" ", Microsoft.Win32.RegistryValueKind.String)
 
         Dim pau As Integer = rand.Next(1, 20)
         Dim pauInt As Integer = rand.Next(100, 1500)
@@ -74,9 +73,11 @@ Public Class SPLASH_SCREEN
         ''--- SEARCHES FOR ALL SAVE FILES AND EXTRACTS NAME AND LEVELS TO BE DISPLAYED ON LOAD SCREEN ---''
         Dim sTemp As String
         Dim save1() As String
-        saveFilePath = SearchForFile(temp, "sav.msav")
+
+        Dim applicationDirectory As String = Application.StartupPath()
+        saveFilePath = Path.Combine(applicationDirectory, "sav.msav")
         If IO.File.Exists(saveFilePath) Then
-            save1 = IO.File.ReadAllLines(SearchForFile(temp, "sav.msav"))
+            save1 = IO.File.ReadAllLines(saveFilePath)
             sTemp = save1(1).Substring(save1(1).IndexOf("=") + 1)
             hasSave = sTemp
             sTemp = save1(2).Substring(save1(2).IndexOf("=") + 1)
@@ -98,7 +99,7 @@ Public Class SPLASH_SCREEN
             oWrite.Close()
             oFile.Close()
             If IO.File.Exists(saveFilePath) Then
-                save1 = IO.File.ReadAllLines(SearchForFile(temp, "sav.msav"))
+                save1 = IO.File.ReadAllLines(saveFilePath)
                 sTemp = save1(1).Substring(save1(1).IndexOf("=") + 1)
                 hasSave = sTemp
                 sTemp = save1(2).Substring(save1(2).IndexOf("=") + 1)
